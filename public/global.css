@@ -1,0 +1,5 @@
+/* purgecss start ignore */
+
+@import '../node_modules/perfect-scrollbar/css/perfect-scrollbar.css';
+@import './assets/css/material-dashboard.min.css';
+@import './assets/demo/demo.css';
