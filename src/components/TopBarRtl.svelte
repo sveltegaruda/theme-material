@@ -1,8 +1,29 @@
 <script>
+    import { onMount } from "svelte"
     import TopLinks from "./TopLinks.svelte";
 
     let isNotif = false;
     let isProfile = false;
+
+    let toggler = null
+
+    let isMenuVisible = false
+
+    let html
+    onMount(() => (html = document.getElementsByTagName("html")[0]))
+
+    const toggleNav = () => {
+        if (isMenuVisible) {
+            html.classList.remove("nav-open")
+            toggler.classList.remove("toggled")
+            isMenuVisible = false
+            return
+        }
+
+        html.classList.add("nav-open")
+        toggler.classList.add("toggled")
+        isMenuVisible = true
+    }
 </script>
 
 <!-- Navbar -->
@@ -18,7 +39,10 @@
             data-toggle="collapse"
             aria-controls="navigation-index"
             aria-expanded="false"
-            aria-label="Toggle navigation">
+            aria-label="Toggle navigation"
+            bind:this={toggler}
+            on:click={toggleNav}
+          >
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon icon-bar" />
             <span class="navbar-toggler-icon icon-bar" />
