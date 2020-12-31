@@ -1,3 +1,21 @@
+<script>
+    import { createEventDispatcher } from "svelte";
+    const dispatch = createEventDispatcher();
+
+    import store from "../stores";
+    $: stores = $store;
+
+    const handleMobile = () => {
+        dispatch("handleMobile");
+    };
+</script>
+
+<style>
+    .close-layer {
+        cursor: pointer;
+    }
+</style>
+
 <footer class="footer">
     <div class="container-fluid">
         <nav class="float-left">
@@ -29,3 +47,7 @@
         </div>
     </div>
 </footer>
+
+{#if stores.isMobile === true}
+    <div class="close-layer visible" on:click={handleMobile} />
+{/if}

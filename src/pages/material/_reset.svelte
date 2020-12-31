@@ -10,13 +10,22 @@
         const scrollbar = document.querySelector(".wrapper");
         const ps = new PerfectScrollbar(scrollbar);
     });
+
+    import store from "../../stores";
+    $: stores = $store;
+
+    let isMobile;
+    const handleMobile = () => {
+        isMobile = !stores.isMobile;
+        store.setMobile(isMobile);
+    };
 </script>
 
-<div class="wrapper">
+<div class={stores.isMobile ? 'wrapper nav-open' : 'wrapper'}>
     <SiderMenu />
 
     <div class="main-panel">
-        <TopBar />
+        <TopBar on:handleMobile={handleMobile} />
 
         <div class="content">
             <div class="container-fluid">
@@ -24,7 +33,7 @@
             </div>
         </div>
 
-        <BottomBar />
+        <BottomBar on:handleMobile={handleMobile} />
     </div>
 </div>
 

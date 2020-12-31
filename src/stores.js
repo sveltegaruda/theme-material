@@ -2,7 +2,7 @@ import { writable } from 'svelte/store'
 
 const state = {
     sidebarFilter: {
-        bgcolor: 'orange',
+        bgcolor: 'purple',
         bgimg: 'sidebar-1.jpg'
     },
     notify: {
@@ -14,7 +14,8 @@ const state = {
         styleBottomCenter: 'display: inline-block; margin: 15px auto; position: fixed; transition: all 0.5s ease-in-out 0s; z-index: 1031; bottom: 20px; left: 0px; right: 0px;',
         styleBottomRight: 'display: inline-block; margin: 15px auto; position: fixed; transition: all 0.5s ease-in-out 0s; z-index: 1031; bottom: 20px; right: 20px;',
         isRender: false
-    }
+    },
+    isMobile: false
 }
 
 const { subscribe, update } = writable(state)
@@ -43,6 +44,11 @@ const setNotify = payload => update(state => {
     return state
 })
 
+const setMobile = payload => update(state => {
+    state.isMobile = payload
+    return state
+})
+
 export const links = [
     ["/material/index", "Dashboard", "dashboard", "داشبورد"],
     ["/material/user", "User", "person", "پروفایل کاربر"],
@@ -60,5 +66,5 @@ export default {
     reset,
     setSidebarFilter,
     setNotify,
-    links
+    setMobile
 }
