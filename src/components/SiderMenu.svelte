@@ -1,8 +1,8 @@
 <script>
     import { onMount } from "svelte";
+    import PerfectScrollbar from "perfect-scrollbar";
     import { url, isActive } from "@roxi/routify";
     import store, { links } from "../stores";
-    import PerfectScrollbar from "perfect-scrollbar";
 
     $: stores = $store;
 

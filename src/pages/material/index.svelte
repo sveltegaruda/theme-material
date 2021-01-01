@@ -1,6 +1,4 @@
 <script>
-    import { onMount } from "svelte";
-
     import CardTableTask from "../../components/CardTableTask.svelte";
     import CardTableEmployee from "../../components/CardTableEmployee.svelte";
 
@@ -8,6 +6,7 @@
         labels: ["M", "T", "W", "T", "F", "S", "S"],
         series: [[12, 17, 7, 17, 23, 18, 38]],
     };
+
     let optionsDailySalesChart = {
         fullWidth: true,
         chartPadding: {
@@ -22,6 +21,7 @@
         labels: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
         series: [[542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]],
     };
+
     let optionsWebsiteViewsChart = {
         axisX: {
             showGrid: false,
@@ -35,6 +35,7 @@
             left: 0,
         },
     };
+
     let responsiveOptions = [
         [
             "screen and (max-width: 640px)",
@@ -53,6 +54,7 @@
         labels: ["12p", "3p", "6p", "9p", "12p", "3a", "6a", "9a"],
         series: [[230, 750, 450, 300, 280, 240, 200, 190]],
     };
+
     let optionsCompletedTasksChart = {
         fullWidth: true,
         chartPadding: {
@@ -85,11 +87,14 @@
             optionsCompletedTasksChart
         );
     };
-
-    onMount(() => {
-        initializeChartist();
-    });
 </script>
+
+<svelte:head>
+    <script
+        src="https://demos.creative-tim.com/material-dashboard/assets/js/plugins/chartist.min.js"
+        on:load={initializeChartist}>
+    </script>
+</svelte:head>
 
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6">

@@ -1,15 +1,8 @@
 <script>
-    import { onMount } from "svelte";
-    import PerfectScrollbar from "perfect-scrollbar";
     import SiderMenu from "../../components/SiderMenu.svelte";
     import TopBar from "../../components/TopBar.svelte";
     import BottomBar from "../../components/BottomBar.svelte";
     import SideSetting from "../../components/SideSetting.svelte";
-
-    onMount(() => {
-        const scrollbar = document.querySelector(".wrapper");
-        const ps = new PerfectScrollbar(scrollbar);
-    });
 
     import store from "../../stores";
     $: stores = $store;
