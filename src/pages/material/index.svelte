@@ -105,7 +105,7 @@
                 <div class="stats">
                     <i class="material-icons text-danger">warning</i>
                     <!-- svelte-ignore a11y-invalid-attribute -->
-                    <a href="javascript:void(0);">Get More Space...</a>
+                    <a href="#">Get More Space...</a>
                 </div>
             </div>
         </div>

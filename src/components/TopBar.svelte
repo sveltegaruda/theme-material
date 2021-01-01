@@ -54,7 +54,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <!-- svelte-ignore a11y-invalid-attribute -->
-                    <a class="nav-link" href="javascript:void(0);">
+                    <a class="nav-link" href="#;">
                         <i class="material-icons">dashboard</i>
                         <p class="d-lg-none d-md-block">Stats</p>
                     </a>
@@ -62,7 +62,7 @@
                 <li class="nav-item dropdown">
                     <!-- svelte-ignore a11y-invalid-attribute -->
                     <a
-                        href="javascript:void(0)"
+                        href="#"
                         id="navbarDropdownMenuLink"
                         class="nav-link"
                         data-toggle="dropdown"
@@ -93,7 +93,7 @@
                 <li class="nav-item dropdown">
                     <!-- svelte-ignore a11y-invalid-attribute -->
                     <a
-                        href="javascript:void(0)"
+                        href="#"
                         id="navbarDropdownProfile"
                         class="nav-link"
                         data-toggle="dropdown"

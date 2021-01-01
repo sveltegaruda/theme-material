@@ -14,7 +14,7 @@
         class={isSetting ? 'dropdown show-dropdown open show' : 'dropdown show-dropdown'}>
         <!-- svelte-ignore a11y-invalid-attribute -->
         <a
-            href="javascript:void(0)"
+            href="#"
             data-toggle="dropdown"
             on:click|preventDefault={() => (isSetting = !isSetting)}>
             <i class="fa fa-cog fa-2x" />
@@ -24,7 +24,7 @@
             <li class="adjustments-line">
                 <!-- svelte-ignore a11y-invalid-attribute -->
                 <a
-                    href="javascript:void(0)"
+                    href="#"
                     class="switch-trigger active-color">
                     <div class="badge-colors ml-auto mr-auto">
                         <span
@@ -77,7 +77,7 @@
             <li class="active">
                 <!-- svelte-ignore a11y-invalid-attribute -->
                 <a
-                    href="javascript:void(0)"
+                    href="#"
                     class="img-holder switch-trigger"
                     on:click={() => handleFilter({
                             bgcolor: stores.sidebarFilter.bgcolor,
@@ -89,7 +89,7 @@
             <li>
                 <!-- svelte-ignore a11y-invalid-attribute -->
                 <a
-                    href="javascript:void(0)"
+                    href="#"
                     class="img-holder switch-trigger"
                     on:click={() => handleFilter({
                             bgcolor: stores.sidebarFilter.bgcolor,
@@ -101,7 +101,7 @@
             <li>
                 <!-- svelte-ignore a11y-invalid-attribute -->
                 <a
-                    href="javascript:void(0)"
+                    href="#"
                     class="img-holder switch-trigger"
                     on:click={() => handleFilter({
                             bgcolor: stores.sidebarFilter.bgcolor,
@@ -113,7 +113,7 @@
             <li>
                 <!-- svelte-ignore a11y-invalid-attribute -->
                 <a
-                    href="javascript:void(0)"
+                    href="#"
                     class="img-holder switch-trigger"
                     on:click={() => handleFilter({
                             bgcolor: stores.sidebarFilter.bgcolor,

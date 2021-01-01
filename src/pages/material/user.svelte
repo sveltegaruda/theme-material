@@ -111,7 +111,7 @@
         <div class="card card-profile">
             <div class="card-avatar">
                 <!-- svelte-ignore a11y-invalid-attribute -->
-                <a href="javascript:void(0);">
+                <a href="#;">
                     <img class="img" src="/assets/img/faces/marc.jpg" alt="" />
                 </a>
             </div>
@@ -125,7 +125,7 @@
                 </p>
                 <!-- svelte-ignore a11y-invalid-attribute -->
                 <a
-                    href="javascript:void(0);"
+                    href="#;"
                     class="btn btn-primary btn-round">Follow</a>
             </div>
         </div>
