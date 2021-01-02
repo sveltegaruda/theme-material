@@ -19,6 +19,10 @@ cd my-project
 npm i
 ```
 
+# Demo
+
+You can open the demo <a href="https://sveltegaruda.vercel.app" rel="nofollow">here</a>.
+
 # Folder structure
 
 | Description | Folder |
