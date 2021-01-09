@@ -21,7 +21,7 @@ npm i
 
 # Demo
 
-You can open the demo <a href="https://sveltegaruda-theme.vercel.app/" rel="nofollow">here</a>.
+You can open the demo <a href="https://theme-material.vercel.app/" rel="nofollow">here</a>.
 
 # Folder structure
 
